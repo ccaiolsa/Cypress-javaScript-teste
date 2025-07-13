@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo do Banco">
+        </div>
+            <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Serviços</a></li>
+        </ul>
+        <div class="nav-search">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="submit">Buscar</button>
+    </nav>
+    <header class="hero">
+            <h1>Bem-vindo ao nosso site de banco</h1>
+            <p>Gerencie suas finanças com facilidade</p>
+            <button class="cta-button">Saiba Mais</button>
+    </header>
+    <section class="section1">
+        <h2>SERVIÇOS</h2>
+        <div class="services">
+            <ul>
+                <li>Conta Corrente</li>
+                <li>Cartão de Crédito</li>
+                <li>Empréstimos</li>
+                <li>Investimentos</li>
+
+        </div>
+        <div class="service_img">
+            <img src="./Imagens/model_man1.jpg" width="300px" max-width="500px" height="auto" alt="Homem mexendo no celular">
+        </div>
+    </section>
+    <section class="section2">
+        <h2>Contato</h2>
+        <form id="contact-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-produtos">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Serviço</a>
+            <a href="#">Suporte</a>
+        </div>
+        <div class="footer-links">
+            <a href="#">FAQ</a>
+            <a href="#">Blog</a>
+            <a href="#">Carreiras</a>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Banco Exemplo. Todos os direitos reservados.</p>
+    </div>
+    <script src="formulario.js"></script>
+</body>
+</html>
