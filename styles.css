@@ -5,26 +5,28 @@
     --primary-color: hsl(210, 98%, 35%);
     --secondary-color: hsl(207, 73%, 97%);
     --accent-color: hsl(210, 95%, 15%);
-    --background-color: hsl(210, 100%, 96%);
+    --background-color: hsla(210, 78%, 91%, 0.918);
     --border-color: hsl(209, 94%, 7%);
     --error-color: hsl(0, 100%, 50%);
-    --button-color: hsl(61, 100%, 50%);
-    --button-hover-color: hsl(41, 99%, 49%);
-    --box-shadow: 0px 4px 4px 10px hsla(209, 20%, 22%, 0.582);
+    --button-color: hsl(22, 91%, 48%);
+    --button-hover-color: hsl(22, 100%, 50%);
+    --box-shadow: 4px 4px 5px hsla(209, 20%, 22%, 0.582);
     --text-color: hsl(210, 26%, 15%);
     --font-family: 'Roboto', Arial, Helvetica, sans-serif;
     --font-text: 18px;
     --font-heading: 32px;
     --font-size-small: 14px;
+    --font-size-big: 24px;
     --font-weight: 400;
     --font-weight-bold: 700;
     --font-weight-light: 300;
     --line-height: 1.5;
+    --transition: transition: background-color 0.3s ease, color 0.3s ease;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 }
 body{
     background-color: var(--background-color);
@@ -40,7 +42,7 @@ body{
     justify-content: center;
     align-items: center;
     box-shadow: var(--box-shadow);
-    border-radius: 7px;
+    border-radius: 0 0 7px 7px;
 }
 .logo{
     margin: auto;
@@ -65,6 +67,27 @@ body{
 .nav-search{
     margin: auto;
 }
+.nav-search input{
+    padding: 0.3rem;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    font-size: var(--font-size-small);
+    font-family: var(--font-family);
+}
+.nav-search button{
+    padding: 0.5rem 0.7rem;
+    background-color: var(--button-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 7px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.nav-search button:hover{
+    background-color: var(--button-hover-color);
+    color: var(--accent-color);
+    box-shadow: 2px 2px 5px hsla(209, 20%, 22%, 0.582);
+}
 /*---- CSS - Header ----*/
 .hero{
     position: relative;
@@ -79,25 +102,38 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
-    font-size: var(--font-heading);
+    font-size: 46px;
     text-align: left;
     color: var(--secondary-color);
     font-weight: var(--font-weight-bold);
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px hsla(209, 20%, 22%, 0.582);
+    line-height: var(--line-height);
+    margin-left: 2rem;
+}
+.hero p{
+    font-size: 28px;
+    font-weight: var(--font-weight-light);
 }
 .hero button{
     position: relative;
     z-index: 1;
     display: inline-block;
     padding: 0.5rem 1rem;
+    margin-left: 2rem;
     background-color: var(--button-color);
     color: var(--secondary-color);
-    border: var(--border-color) 2px solid;
     border-radius: 7px;
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
+    border: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-big);
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: var(--transition)
+}
+.hero button:hover{
+    background-color: var(--button-hover-color);
+    color: var(--accent-color);
+    box-shadow: 2px 2px 5px hsla(209, 20%, 22%, 0.582);
 }
 .hero::before{
     content:" ";
@@ -115,47 +151,141 @@ body{
     height: 100%;
 }
 /*---- CSS - Section1 ----*/
-h2{
-    display: block;
-    text-align: center;
-    color: var(--secondary-color);
-    font-size: var(--font-heading);
-    font-weight: var(--font-weight-bold);
-    margin: 0 auto;
-    background-color: var(--primary-color);
-    width: 70%;
-}
 .section1{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.section1 .services{
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
     padding: 2rem;
-}
-.section1 .services ul{
-    list-style: none;
-    padding: 0;
-}
-.section1 .services li{
-    margin: 1rem 0;
-    padding: 0.5rem;
-    background-color: var(--secondary-color);
-    border-radius: 7px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2rem;
+    border-radius: 0 12px 0 12px;
     box-shadow: var(--box-shadow);
 }
-.section1 .services li a{
-    color: var(--text-color);
-    text-decoration: none;
+.section1 h2{
+    font-size: var(--font-heading);
+    font-family: var(--font-family);
+    color: var(--secondary-color);
     font-weight: var(--font-weight-bold);
+    text-shadow: 2px 2px 4px hsla(209, 20%, 22%, 0.582);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+.section1 .services{
+    flex: 1;
+    margin: auto 0 auto 3rem;
+}
+.services ul{
+    list-style: none;  
+}
+.services ul li{
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 7px;
+    margin: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.services ul li:hover{
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
 }
 .section1 .service_img{
-    align-items: center;
-    justify-content: center;
+     margin: auto 3rem auto 0;
 }
-
-
+.service_img img{
+    border-radius: 0 12px 0 12px;
+    box-shadow: 5px 7px 3px hsla(209, 20%, 22%, 0.582), -5px -7px 10px hsla(209, 96%, 49%, 0.582)
+}
 /*---- CSS - Section2 ----*/
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 2rem 4rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px hsla(209, 20%, 22%, 0.582), -2px -2px 2px hsl(0, 0%, 99%);
+}
+.section2 #contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+}
 /*---- CSS - formulário ----*/
+.section2 #contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+}
+.section2 #contact-form label{
+    margin-bottom: 0.5rem;
+    font-weight: var(--font-weight-bold);
+}
+#contact-form input, #contact-form textarea{
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    font-size: var(--font-text);
+    font-family: var(--font-family);
+}
+#contact-form button{
+    padding: 0.5rem 1rem;
+    background-color: var(--button-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 7px;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: var(--font-family);
+}
+#contact-form button:hover{
+    background-color: var(--button-hover-color);
+    color: var(--accent-color);
+    box-shadow: 2px 2px 5px hsla(209, 20%, 22%, 0.582);
+}
 /*---- CSS - footer ----*/
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color)
+}
+footer .footer-produtos, footer .footer-links, footer .social-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 1rem 4rem 1rem 4rem;;
+    margin: auto;
+    border:none;
+}
+.footer-produtos a, .footer-links a, .social-media a{
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-text);
+    font-family: var(--font-family);
+}
+.footer-produtos a:hover, .footer-links a:hover, .social-media a:hover{
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+/*---- CSS - footer bottom----*/
+.footer-bottom{
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+    padding: 0.5rem;;
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-small);
+}
