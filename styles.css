@@ -189,6 +189,13 @@ body{
     color: var(--primary-color);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+.services ul li a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-text);
+    font-family: var(--font-family);
+}
 .services ul li:hover{
     background-color: var(--accent-color);
     color: var(--secondary-color);
