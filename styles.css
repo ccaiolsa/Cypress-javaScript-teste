@@ -262,6 +262,10 @@ body{
     color: var(--accent-color);
     box-shadow: 2px 2px 5px hsla(209, 20%, 22%, 0.582);
 }
+#contact-form button:disabled{
+    background-color: gray;
+    cursor: not-allowed;
+}
 form .oculto{
     display: none;
 }
@@ -272,8 +276,8 @@ form p{
     font-size: var(--font-size-big);
     color: darkblue;
     text-align: center;
-    width: 100%;
-    height: 100%;
+    width: 3rem;
+    height: 2rem;
     padding: 2rem;
 }
 /*---- CSS - footer ----*/
