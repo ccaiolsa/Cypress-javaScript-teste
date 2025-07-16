@@ -262,6 +262,20 @@ body{
     color: var(--accent-color);
     box-shadow: 2px 2px 5px hsla(209, 20%, 22%, 0.582);
 }
+form .oculto{
+    display: none;
+}
+form p{
+    display: block;
+    font-family:var(--font-family);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-big);
+    color: darkblue;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
 /*---- CSS - footer ----*/
 footer{
     display: flex;
